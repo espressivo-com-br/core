@@ -1,0 +1,61 @@
+<?php  /** @var $block \Magento\Checkout\Block\Cart\Sidebar */ ?>
+<div data-block="minicart" class="minicart-wrapper">
+    <a class="action showcart" href="<?php echo $block->getShoppingCartUrl(); ?>"
+       data-bind="scope: 'minicart_content'">
+        <span class="text"><?php echo __('My Cart'); ?></span>
+        <span class="ex-top-cart-subtotal">
+            <!-- ko if: getCartParam('summary_count') -->
+                <!-- ko if: getCartParam('possible_onepage_checkout') -->
+                <!-- ko foreach: getRegion('subtotalContainer') -->
+                    <!-- ko template: getTemplate() --><!-- /ko -->kr-&nbsp;
+                <!-- /ko -->
+                <!-- /ko -->
+            <!-- /ko --></span>
+
+            <span class="counter-label-new">
+            <!-- ko ifnot: getCartParam('summary_count') -->
+            <!-- ko i18n: ' 0.00kr - 0 item ' --><!-- /ko -->
+            <!-- /ko -->
+            <!-- ko if: getCartParam('summary_count') -->
+                <!-- ko text: getCartParam('summary_count') --><!-- /ko -->
+                <!-- ko if: getCartParam('summary_count') == 1 -->
+                <!-- ko i18n: 'item' --><!-- /ko -->
+            <!-- /ko -->
+            <!-- ko if: getCartParam('summary_count') > 1 -->
+                <!-- ko i18n: 'items' --><!-- /ko -->
+            <!-- /ko -->
+            <!-- /ko -->
+            </span>
+    </a>
+    <?php if ($block->getIsNeedToDisplaySideBar()): ?>
+        <div class="block block-minicart empty"
+             data-role="dropdownDialog"
+             data-mage-init='{"dropdownDialog":{
+                "appendTo":"[data-block=minicart]",
+                "triggerTarget":".showcart",
+                "timeout": "2000",
+                "closeOnMouseLeave": false,
+                "closeOnEscape": true,
+                "triggerClass":"active",
+                "parentClass":"active",
+                "buttons":[]}}'>
+			<?= $block->getChildHtml('minicart.addons') ?>
+            <div id="minicart-content-wrapper" data-bind="scope: 'minicart_content'">
+                <!-- ko template: getTemplate() --><!-- /ko -->
+            </div>
+        </div>
+    <?php endif ?>
+    <script>
+        window.checkout = <?php echo \Zend_Json::encode($block->getConfig()); ?>;
+    </script>
+    <script type="text/x-magento-init">
+    {
+        "[data-block='minicart']": {
+            "Magento_Ui/js/core/app": <?php echo $block->getJsLayout();?>
+        },
+        "*": {
+            "Magento_Ui/js/block-loader": "<?php echo $block->getViewFileUrl('images/loader-1.gif'); ?>"
+        }
+    }
+    </script>
+</div>

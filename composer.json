@@ -1,6 +1,6 @@
 {
 	"name": "mage2pro/nightcall.se"
-	,"version": "0.0.3"
+	,"version": "0.0.4"
 	,"description": "A custom module for nightcall.se"
 	,"type": "magento2-module"
 	,"homepage": "https://github.com/mage2pro/nightcall.se"
