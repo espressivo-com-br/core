@@ -3,8 +3,12 @@
  * 2018-04-26
  * https://github.com/magento/magento2/blob/2.2.3/app/code/Magento/Checkout/view/frontend/templates/cart/shipping.phtml#L10-L40
  * @var \Magento\Checkout\Block\Cart\Shipping $block */
+	$css = 'block shipping';
+	if (!$block->getQuote()->getItems()) {
+		$css .= ' df-hidden';
+	}
 ?>
-<div id="block-shipping" class="block shipping" data-mage-init='{"collapsible":{"openedState": "active", "saveState": false}}'>
+<div id="block-shipping" class="<?= $css ?>" data-mage-init='{"collapsible":{"openedState": "active", "saveState": false}}'>
     <div class="title" data-role="title">
         <strong id="block-shipping-heading" role="heading" aria-level="2">
             <?= /* @escapeNotVerified */ $block->getQuote()->isVirtual() ? __('Estimate Tax') : __('Estimate Shipping and Tax') ?>
@@ -20,7 +24,7 @@
             }
         </script>
         <script>
-            window.checkoutConfig = <?= /* @escapeNotVerified */ $block->getSerializedCheckoutConfig() ?>;
+            window.checkoutConfig = <?= $block->getSerializedCheckoutConfig() ?>;
             window.customerData = window.checkoutConfig.customerData;
             window.isCustomerLoggedIn = window.checkoutConfig.isCustomerLoggedIn;
             require([

@@ -1,0 +1,20 @@
+<?php
+/**
+ * 2018-04-26
+ * https://github.com/magento/magento2/blob/2.2.3/app/code/Magento/Checkout/view/frontend/templates/cart/shipping.phtml#L10-L40
+ * @var \Magento\Checkout\Block\Cart\Totals $block */
+	$css = 'cart-totals';
+	if (!$block->getQuote()->getItems()) {
+		$css .= ' df-hidden';
+	}
+?>
+<div id="cart-totals" class="<?= $css; ?>" data-bind="scope:'block-totals'">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+    <script type="text/x-magento-init">
+            {
+                "#cart-totals": {
+                    "Magento_Ui/js/core/app": <?= /* @escapeNotVerified */ $block->getJsLayout() ?>
+                }
+            }
+    </script>
+</div>
