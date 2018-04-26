@@ -13,7 +13,7 @@ https://github.com/magento/magento2/issues/7341#issuecomment-259134655 -->
 				cacheable='false'
 				class='Magento\Checkout\Block\Cart\Shipping'
 				name='dfe.nightcall.checkout.cart.shipping'
-				template='Magento_Checkout::cart/shipping.phtml'
+				template='Dfe_NightCall::shipping.phtml'
 			>
 				<arguments>
 					<argument name='jsLayout' xsi:type='array'>
