@@ -1,0 +1,16 @@
+<?xml version='1.0'?>
+<page
+	xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+	xsi:noNamespaceSchemaLocation='urn:magento:framework:View/Layout/etc/page_configuration.xsd'
+>
+	<body>
+<!-- 2018-04-26
+https://github.com/magento/magento2/blob/2.2.3/app/code/Magento/Checkout/view/frontend/layout/default.xml#L59-L59
+-->
+		<referenceContainer name='minicart.addons'>
+			<container name='dfe.nightcall.minicart'/>
+		</referenceContainer>
+	</body>
+	<update handle='dfe_nightcall_shipping_estimation'/>
+	<update handle='dfe_nightcall_totals'/>
+</page>

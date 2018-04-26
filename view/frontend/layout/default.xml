@@ -3,6 +3,7 @@
 	xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
 	xsi:noNamespaceSchemaLocation='urn:magento:framework:View/Layout/etc/page_configuration.xsd'
 >
+	<head><css src='Dfe_NightCall::main.css'/></head>
 	<body>
 		<referenceBlock name='minicart'>
 			<action method='setTemplate'>
@@ -10,5 +11,5 @@
 			</action>			
 		</referenceBlock>
 	</body>
-	<update handle='dfe_nightcall_shipping'/>
+	<update handle='dfe_nightcall_minicart'/>
 </page>

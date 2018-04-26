@@ -4,7 +4,7 @@
 	xsi:noNamespaceSchemaLocation='urn:magento:framework:View/Layout/etc/page_configuration.xsd'
 >
 	<body>
-		<referenceContainer name='minicart.addons'>
+		<referenceContainer name='dfe.nightcall.minicart'>
 <!-- 2018-04-26
 The block should have `cacheable='false'`:
 https://github.com/magento/magento2/issues/7341#issuecomment-259134655 -->
@@ -31,25 +31,25 @@ https://github.com/magento/magento2/issues/7341#issuecomment-259134655 -->
 	</item>
 </item>
 <item name='components' xsi:type='array'>
-	<item name='summary-block-config' xsi:type='array'>
-		<item name='component' xsi:type='string'>uiComponent</item>
-		<item name='children' xsi:type='array'>
-			<item name='shipping-rates-validation' xsi:type='array'>
-				<item name='children' xsi:type='array'>
-					<!--Step configuration components-->
-				</item>
+<item name='summary-block-config' xsi:type='array'>
+	<item name='component' xsi:type='string'>uiComponent</item>
+	<item name='children' xsi:type='array'>
+		<item name='shipping-rates-validation' xsi:type='array'>
+			<item name='children' xsi:type='array'>
+				<!--Step configuration components-->
 			</item>
 		</item>
 	</item>
-	<item name='block-summary' xsi:type='array'>
-		<item name='component' xsi:type='string'>uiComponent</item>
-		<item name='deps' xsi:type='array'>
-			<item name='0' xsi:type='string'>summary-block-config</item>
-		</item>
-		<item name='children' xsi:type='array'>
-			<item name='block-rates' xsi:type='array'>
-				<item name='component' xsi:type='string'>Magento_Checkout/js/view/cart/shipping-rates</item>
-				<item name='sortOrder' xsi:type='string'>2</item>
+</item>
+<item name='block-summary' xsi:type='array'>
+	<item name='component' xsi:type='string'>uiComponent</item>
+	<item name='deps' xsi:type='array'>
+		<item name='0' xsi:type='string'>summary-block-config</item>
+	</item>
+	<item name='children' xsi:type='array'>
+		<item name='block-rates' xsi:type='array'>
+			<item name='component' xsi:type='string'>Magento_Checkout/js/view/cart/shipping-rates</item>
+			<item name='sortOrder' xsi:type='string'>2</item>
 <!-- 2018-04-26
 https://github.com/magento/magento2/blob/2.2.3/app/code/Magento/Tax/view/frontend/layout/checkout_cart_index.xml#L17-L22
 -->
@@ -58,7 +58,7 @@ https://github.com/magento/magento2/blob/2.2.3/app/code/Magento/Tax/view/fronten
 		<item name='component' xsi:type='string'>Magento_Tax/js/view/checkout/shipping_method/price</item>
 		<item name='displayArea' xsi:type='string'>price</item>
 	</item>
-</item>				
+	</item>
 			</item>
 			<item name='block-shipping' xsi:type='array'>
 				<item name='component' xsi:type='string'>Magento_Checkout/js/view/cart/shipping-estimation</item>
