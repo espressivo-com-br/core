@@ -8,53 +8,53 @@
 <!-- 2018-04-26
 The blocks should have `cacheable='false'`:
 https://github.com/magento/magento2/issues/7341#issuecomment-259134655 -->
-			<container as='totals' label='Shopping Cart Totals' name='checkout.cart.totals.container'>
-				<block
-					cacheable='false'
-					class='Magento\Checkout\Block\Cart\Totals'
-					name='checkout.cart.totals'
-					template='Magento_Checkout::cart/totals.phtml'
-				>
-					<arguments>
-						<argument name='jsLayout' xsi:type='array'>
-							<item name='components' xsi:type='array'>
-								<item name='block-totals' xsi:type='array'>
-									<item name='component' xsi:type='string'>Magento_Checkout/js/view/cart/totals</item>
-									<item name='displayArea' xsi:type='string'>totals</item>
-									<item name='config' xsi:type='array'>
-										<item name='template' xsi:type='string'>Magento_Checkout/cart/totals</item>
-									</item>
-									<item name='children' xsi:type='array'>
-										<!-- sort order for this totals is configured on admin panel-->
-										<!-- Stores->Configuration->SALES->Sales->General->Checkout Totals Sort Order -->
-										<item name='subtotal' xsi:type='array'>
-											<item name='component' xsi:type='string'>Magento_Checkout/js/view/summary/subtotal</item>
-											<item name='config' xsi:type='array'>
-												<item name='title' xsi:type='string' translate='true'>Subtotal</item>
-												<item name='template' xsi:type='string'>Magento_Checkout/cart/totals/subtotal</item>
-											</item>
-										</item>
-										<item name='shipping' xsi:type='array'>
-											<item name='component' xsi:type='string'>Magento_Checkout/js/view/cart/totals/shipping</item>
-											<item name='config' xsi:type='array'>
-												<item name='title' xsi:type='string' translate='true'>Shipping</item>
-												<item name='template' xsi:type='string'>Magento_Checkout/cart/totals/shipping</item>
-											</item>
-										</item>
-										<item name='grand-total' xsi:type='array'>
-											<item name='component' xsi:type='string'>Magento_Checkout/js/view/summary/grand-total</item>
-											<item name='config' xsi:type='array'>
-												<item name='title' xsi:type='string' translate='true'>Order Total</item>
-												<item name='template' xsi:type='string'>Magento_Checkout/cart/totals/grand-total</item>
-											</item>
-										</item>
-									</item>
-								</item>
-							</item>
-						</argument>
-					</arguments>
-				</block>
-			</container>
+<container as='totals' label='Shopping Cart Totals' name='checkout.cart.totals.container'>
+	<block
+		cacheable='false'
+		class='Magento\Checkout\Block\Cart\Totals'
+		name='checkout.cart.totals'
+		template='Magento_Checkout::cart/totals.phtml'
+	>
+		<arguments>
+			<argument name='jsLayout' xsi:type='array'>
+				<item name='components' xsi:type='array'>
+					<item name='block-totals' xsi:type='array'>
+						<item name='component' xsi:type='string'>Magento_Checkout/js/view/cart/totals</item>
+						<item name='displayArea' xsi:type='string'>totals</item>
+						<item name='config' xsi:type='array'>
+							<item name='template' xsi:type='string'>Magento_Checkout/cart/totals</item>
+						</item>
+						<item name='children' xsi:type='array'>
+<!-- sort order for this totals is configured on admin panel-->
+<!-- Stores->Configuration->SALES->Sales->General->Checkout Totals Sort Order -->
+<item name='subtotal' xsi:type='array'>
+	<item name='component' xsi:type='string'>Magento_Checkout/js/view/summary/subtotal</item>
+	<item name='config' xsi:type='array'>
+		<item name='title' xsi:type='string' translate='true'>Subtotal</item>
+		<item name='template' xsi:type='string'>Magento_Checkout/cart/totals/subtotal</item>
+	</item>
+</item>
+<item name='shipping' xsi:type='array'>
+	<item name='component' xsi:type='string'>Magento_Checkout/js/view/cart/totals/shipping</item>
+	<item name='config' xsi:type='array'>
+		<item name='title' xsi:type='string' translate='true'>Shipping</item>
+		<item name='template' xsi:type='string'>Magento_Checkout/cart/totals/shipping</item>
+	</item>
+</item>
+<item name='grand-total' xsi:type='array'>
+	<item name='component' xsi:type='string'>Magento_Checkout/js/view/summary/grand-total</item>
+	<item name='config' xsi:type='array'>
+		<item name='title' xsi:type='string' translate='true'>Order Total</item>
+		<item name='template' xsi:type='string'>Magento_Checkout/cart/totals/grand-total</item>
+	</item>
+</item>
+						</item>
+					</item>
+				</item>
+			</argument>
+		</arguments>
+	</block>
+</container>
 		</referenceContainer>
 	</body>
 </page>
