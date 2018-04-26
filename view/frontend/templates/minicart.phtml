@@ -28,7 +28,8 @@
             </span>
     </a>
     <?php if ($block->getIsNeedToDisplaySideBar()): ?>
-        <div class="block block-minicart empty"
+<!-- 2018-04-26 I have added the `cart-summary` class to style the «Estimate Shipping and Tax» block. -->
+        <div class="block block-minicart empty cart-summary"
              data-role="dropdownDialog"
              data-mage-init='{"dropdownDialog":{
                 "appendTo":"[data-block=minicart]",
@@ -39,6 +40,7 @@
                 "triggerClass":"active",
                 "parentClass":"active",
                 "buttons":[]}}'>
+<!-- 2018-04-26 I have added the `minicart.addons` line below. -->
 			<?= $block->getChildHtml('minicart.addons') ?>
             <div id="minicart-content-wrapper" data-bind="scope: 'minicart_content'">
                 <!-- ko template: getTemplate() --><!-- /ko -->
