@@ -11,6 +11,6 @@ If you have problems with these commands, please check the [detailed instruction
 
 ## Screenshots
 
-![](https://raw.githubusercontent.com/mage2pro/nightcall.se/1.0.3/etc/doc/1.png)
+![](https://raw.githubusercontent.com/mage2pro/nightcall.se/1.0.4/etc/doc/1.png)
 
-![](https://raw.githubusercontent.com/mage2pro/nightcall.se/1.0.3/etc/doc/2.png)
+![](https://raw.githubusercontent.com/mage2pro/nightcall.se/1.0.4/etc/doc/2.png)
