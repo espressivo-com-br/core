@@ -8,7 +8,7 @@ composer require espressivo.com.br/core:*
 sudo bin/magento setup:upgrade
 sudo rm -rf var/di var/generation generated/code && sudo bin/magento setup:di:compile
 sudo rm -rf pub/static/* && sudo bin/magento setup:static-content:deploy -f en_US pt_BR --area adminhtml --theme Magento/backend && sudo bin/magento setup:static-content:deploy -f en_US pt_BR --area frontend --theme Meigee/barbour
-chown -R -v www-data /var/www && chgrp -R -v www-data /var/www
+sudo chown -R -v www-data /var/www && sudo chgrp -R -v www-data /var/www
 bin/magento maintenance:disable
 bin/magento cache:enable
 ```
@@ -22,7 +22,7 @@ composer update espressivo.com.br/core
 sudo bin/magento setup:upgrade
 sudo rm -rf var/di var/generation generated/code && sudo bin/magento setup:di:compile
 sudo rm -rf pub/static/* && sudo bin/magento setup:static-content:deploy -f en_US pt_BR --area adminhtml --theme Magento/backend && sudo bin/magento setup:static-content:deploy -f en_US pt_BR --area frontend --theme Meigee/barbour
-chown -R -v www-data /var/www && chgrp -R -v www-data /var/www
+sudo chown -R -v www-data /var/www && sudo chgrp -R -v www-data /var/www
 bin/magento maintenance:disable
 bin/magento cache:enable
 ```
