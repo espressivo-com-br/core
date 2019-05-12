@@ -1,16 +1,16 @@
 {
-	"name": "mage2pro/nightcall.se"
-	,"version": "1.0.4"
-	,"description": "A custom module for nightcall.se"
+	"name": "espressivo.com.br/core"
+	,"version": "1.1.0"
+	,"description": "A custom module for espressivo.com.br"
 	,"type": "magento2-module"
-	,"homepage": "https://github.com/mage2pro/nightcall.se"
-	,"license": "MIT"
+	,"homepage": "https://github.com/espressivo-com-br/core"
+	,"license": "proprietary"
 	,"authors": [{
 		"name": "Dmitry Fedyuk"
 		,"email": "admin@mage2.pro"
 		,"homepage": "https://mage2.pro/users/dmitry_fedyuk"
 		,"role": "Developer"
 	}]
-	,"autoload": {"files": ["registration.php"], "psr-4": {"Dfe\\NightCall\\": ""}}
+	,"autoload": {"files": ["registration.php"], "psr-4": {"Espressivo\\Core\\": ""}}
 	,"keywords": ["Magento 2"]
 }

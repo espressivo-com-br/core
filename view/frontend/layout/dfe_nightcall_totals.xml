@@ -4,7 +4,7 @@
 	xsi:noNamespaceSchemaLocation='urn:magento:framework:View/Layout/etc/page_configuration.xsd'
 >
 	<body>
-		<referenceContainer name='dfe.nightcall.minicart'>
+		<referenceContainer name='espressivo.core.minicart'>
 <!-- 2018-04-26
 The blocks should have `cacheable='false'`:
 https://github.com/magento/magento2/issues/7341#issuecomment-259134655 -->
@@ -13,7 +13,7 @@ https://github.com/magento/magento2/issues/7341#issuecomment-259134655 -->
 		cacheable='false'
 		class='Magento\Checkout\Block\Cart\Totals'
 		name='checkout.cart.totals'
-		template='Dfe_NightCall::totals.phtml'
+		template='Espressivo_Core::totals.phtml'
 	>
 		<arguments>
 			<argument name='jsLayout' xsi:type='array'>

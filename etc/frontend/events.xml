@@ -5,8 +5,8 @@
 >
 	<event name='layout_load_before'>
 		<observer
-			instance='Dfe\NightCall\Observer\LayoutLoadBefore'
-			name='Dfe\NightCall\Observer\LayoutLoadBefore'
+			instance='Espressivo\Core\Observer\LayoutLoadBefore'
+			name='Espressivo\Core\Observer\LayoutLoadBefore'
 		/>
 	</event>
 </config>

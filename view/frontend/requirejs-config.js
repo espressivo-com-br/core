@@ -8,6 +8,6 @@
 var config = {
     config: {
     	// 2018-04-22 «What are requirejs-config.js `mixins`?» https://mage2.pro/t/5297
-        mixins: {'Magento_Checkout/js/sidebar': {'Dfe_NightCall/sidebar': true}}
+        mixins: {'Magento_Checkout/js/sidebar': {'Espressivo_Core/sidebar': true}}
     }
 };

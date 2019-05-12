@@ -4,16 +4,16 @@
 	xsi:noNamespaceSchemaLocation='urn:magento:framework:View/Layout/etc/page_configuration.xsd'
 >
 	<body>
-		<referenceContainer name='dfe.nightcall.minicart'>
+		<referenceContainer name='espressivo.core.minicart'>
 <!-- 2018-04-26
 The block should have `cacheable='false'`:
 https://github.com/magento/magento2/issues/7341#issuecomment-259134655 -->
 			<block
-				as='dfe-nightcall-shipping'
+				as='espressivo-core-shipping'
 				cacheable='false'
 				class='Magento\Checkout\Block\Cart\Shipping'
-				name='dfe.nightcall.checkout.cart.shipping'
-				template='Dfe_NightCall::shipping.phtml'
+				name='espressivo.core.checkout.cart.shipping'
+				template='Espressivo_Core::shipping.phtml'
 			>
 				<arguments>
 					<argument name='jsLayout' xsi:type='array'>
