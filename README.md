@@ -11,6 +11,7 @@ sudo rm -rf pub/static/* && sudo bin/magento setup:static-content:deploy -f en_U
 sudo chown -R -v www-data /var/www && sudo chgrp -R -v www-data /var/www
 bin/magento maintenance:disable
 bin/magento cache:enable
+bin/magento cache:clean
 ```
 
 ## How to upgrade
@@ -25,6 +26,7 @@ sudo rm -rf pub/static/* && sudo bin/magento setup:static-content:deploy -f en_U
 sudo chown -R -v www-data /var/www && sudo chgrp -R -v www-data /var/www
 bin/magento maintenance:disable
 bin/magento cache:enable
+bin/magento cache:clean
 ```
 
 If you have problems with these commands, please check the [detailed instruction](https://mage2.pro/t/263).
