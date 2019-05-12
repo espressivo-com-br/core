@@ -5,10 +5,10 @@ A custom module for [espressivo.com.br](https://espressivo.com.br).
 bin/magento maintenance:enable
 composer clear-cache
 composer require espressivo.com.br/core:*
+sudo bin/magento setup:upgrade
+sudo rm -rf var/di var/generation generated/code && sudo bin/magento setup:di:compile
+sudo rm -rf pub/static/* && sudo bin/magento setup:static-content:deploy -f en_US pt_BR --area adminhtml --theme Magento/backend && sudo bin/magento setup:static-content:deploy -f en_US pt_BR --area frontend --theme Meigee/barbour
 chown -R -v www-data /var/www && chgrp -R -v www-data /var/www
-bin/magento setup:upgrade
-rm -rf var/di var/generation generated/code && bin/magento setup:di:compile
-rm -rf pub/static/* && bin/magento setup:static-content:deploy -f en_US pt_BR --area adminhtml --theme Magento/backend && bin/magento setup:static-content:deploy -f en_US pt_BR --area frontend --theme Meigee/barbour
 bin/magento maintenance:disable
 bin/magento cache:enable
 ```
@@ -19,10 +19,10 @@ bin/magento maintenance:enable
 rm -rf composer.lock
 composer clear-cache
 composer update espressivo.com.br/core
+sudo bin/magento setup:upgrade
+sudo rm -rf var/di var/generation generated/code && sudo bin/magento setup:di:compile
+sudo rm -rf pub/static/* && sudo bin/magento setup:static-content:deploy -f en_US pt_BR --area adminhtml --theme Magento/backend && sudo bin/magento setup:static-content:deploy -f en_US pt_BR --area frontend --theme Meigee/barbour
 chown -R -v www-data /var/www && chgrp -R -v www-data /var/www
-bin/magento setup:upgrade
-rm -rf var/di var/generation generated/code && bin/magento setup:di:compile
-rm -rf pub/static/* && bin/magento setup:static-content:deploy -f en_US pt_BR --area adminhtml --theme Magento/backend && bin/magento setup:static-content:deploy -f en_US pt_BR --area frontend --theme Meigee/barbour
 bin/magento maintenance:disable
 bin/magento cache:enable
 ```
