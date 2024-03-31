@@ -1,4 +1,4 @@
-A custom module for [espressivo.com.br](https://espressivo.com.br).
+A custom module for [espressivo.com.br](https://espressivo.com.br) (Magento 2).
 
 ## How to install
 ```
